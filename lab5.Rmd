@@ -233,14 +233,14 @@ summer %>%
   summarise("Summer Total" = n(), .groups = 'drop')%>%
   #get the total accidents by state
   top_n(10, "Summer Total")
-  #select the top 10 states
+  #select the first 10 states
 
-winter%>%
+winter %>%
   group_by(STATE)%>%
   summarise("Winter Total" = n(), .groups = 'drop')%>%
   #get the total accidents by state
   top_n(10, "Winter Total")
-  #select the top 10 states
+  #select the first 10 states
 
 summer %>%
   tally() %>%
